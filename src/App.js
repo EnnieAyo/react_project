@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './components/Header' ;
+import Content from './components/Content';
+import Footer from './components/Footer';
 
 function App() {
+  
+  let info = {
+    name: 'John',
+    age: 23,
+    gender:'Male',
+    dob: new Date().toLocaleDateString()
+  }
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <h1>Hello Ennie</h1>
+      <Header/>
+      <Content/>
+      {/* <h1>Name : {info.name.toUpperCase()}</h1>
+      <h1>Age : {info.age}</h1>
+      <h1>Gender : {info.gender}</h1>
+      <h1>DOB : {info.dob}</h1> */}
+      <Footer/>
 
     </div>
   );
